@@ -200,3 +200,8 @@ a.button {
   text-decoration: none;
   letter-spacing: 0.5px;
 }
+
+.form-delete button[type="submit"] {
+  margin-top: 8px;
+  background-color: lightcoral;
+}
