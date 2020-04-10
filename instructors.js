@@ -2,6 +2,20 @@ const fs = require('fs');
 const data = require('./data.json');
 const { age, date } = require('./utils');
 
+// Index
+exports.index = (req, res) => {
+  const instructors = data.instructors.map(
+    instructor => {
+      let editedInstructor = {...instructor};
+      editedInstructor.services = instructor.services.split(',');
+      
+      return editedInstructor;
+    }
+  );
+
+  return res.render('instructors/index', { instructors })
+}
+
 // Show
 exports.show = (req, res) => {
   const { id } = req.params;
@@ -15,7 +29,9 @@ exports.show = (req, res) => {
   if (!foundInstructor) {
     return res.send('Instructor not found!');
   }
-
+  console.log(foundInstructor.services);
+  console.log(typeof foundInstructor.services);
+  
   const instructor = {
     ...foundInstructor,
     age: age(foundInstructor.birth),
@@ -117,6 +133,7 @@ exports.put = (req, res) => {
     ...foundInstructor,
     ...req.body,
     birth: Date.parse(req.body.birth),
+    id: Number(req.body.id),
   }
 
   data.instructors[index] = instructor;
