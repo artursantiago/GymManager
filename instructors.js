@@ -29,8 +29,6 @@ exports.show = (req, res) => {
   if (!foundInstructor) {
     return res.send('Instructor not found!');
   }
-  console.log(foundInstructor.services);
-  console.log(typeof foundInstructor.services);
   
   const instructor = {
     ...foundInstructor,
