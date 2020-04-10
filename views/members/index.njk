@@ -2,28 +2,28 @@
 
 {% block content %}
   <div class="card table-container">
-  <a href="/instructors/create">New</a>
+    <a href="/members/create">New</a>
     <table>
       <thead>
         <tr>
-          <th>Instructor</th>
+          <th>Members</th>
           <th>Services</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        {% for instructor in instructors %}
+        {% for member in members %}
           <tr>
             <td>
-              <span style="background-image: url({{instructor.avatar_url}})"></span>
-              {{instructor.name}}
+              <span style="background-image: url({{member.avatar_url}})"></span>
+              {{member.name}}
             </td>
             <td>
-              {% for service in instructor.services %}
+              {% for service in member.services %}
                 <span>{{service}}</span>
               {% endfor %}
             </td>
-            <td><a href="/instructors/{{instructor.id}}">View</a></td>
+            <td><a href="/members/{{member.id}}">View</a></td>
           </tr>
         {% endfor %}
       </tbody>

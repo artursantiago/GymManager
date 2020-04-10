@@ -1,0 +1,110 @@
+<div class="item">
+  <div>Avatar URL</div>
+  <div>
+    <input 
+      type="url"
+      name="avatar_url"
+      placeholder="http://"
+      value="{{member.avatar_url}}"
+    >
+  </div>
+</div>
+
+<div class="item">
+  <div>Member</div>
+  <div>
+    <input 
+      type="text"
+      name="name"
+      value="{{member.name}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>Email</div>
+  <div>
+    <input 
+      type="email"
+      name="email"
+      value="{{member.email}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>Birth</div>
+  <div>
+    <input 
+      type="date"
+      name="birth"  
+      value="{{member.birth}}"
+    >
+  </div>
+</div>
+
+<div class="item">
+  <div>Gender</div>
+  <div>
+    <span>
+      <input 
+          type="radio"
+          name="gender"
+          value="M"
+          {% if member.gender == 'M' or not member.gender %} 
+            checked 
+          {% endif%}
+        >
+        Male
+    </span>
+    <span>
+      <input 
+          type="radio"
+          name="gender"
+          value="F"
+          {% if member.gender == 'F' %} 
+            checked 
+          {% endif%}
+        >
+        Female
+    </span>
+  </div>
+</div>
+
+<div class="item">
+  <div>Blood Type</div>
+  <div>
+    <select name="blood" value="{{members.blood}}">
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select>
+  </div>
+</div>
+
+<div class="item">
+  <div>Weight (Kg)</div>
+  <div>
+    <input 
+      type="number"
+      name="weight"
+      value="{{member.weight}}">
+  </div>
+</div>
+
+<div class="item">
+  <div>Height (cm)</div>
+  <div>
+    <input 
+      type="number"
+      name="height"
+      value="{{member.height}}">
+  </div>
+</div>
+
+<button type="submit">Save</button>

@@ -1,4 +1,17 @@
 {
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1510531704581-5b2870972060?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+      "name": "Artur Melo Santiago Ferreira",
+      "email": "artursantiago2001@hotmail.com",
+      "birth": 988070400000,
+      "gender": "M",
+      "blood": "O-",
+      "weight": "72",
+      "height": "172"
+    }
+  ],
   "instructors": [
     {
       "id": 1,
