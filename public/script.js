@@ -7,3 +7,11 @@ for (item of menuItems)  {
         item.classList.add('active');
     }
 }
+
+const formDelete = document.querySelector('.form-delete');
+formDelete.addEventListener('submit', event => {
+    if (!confirm('Do you want to delete?')) {
+        event.preventDefault();
+    }
+});
+

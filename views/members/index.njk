@@ -7,7 +7,9 @@
       <thead>
         <tr>
           <th>Members</th>
-          <th>Services</th>
+          <th>Email</th>
+          <th>weight</th>
+          <th>Height</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -18,11 +20,9 @@
               <span style="background-image: url({{member.avatar_url}})"></span>
               {{member.name}}
             </td>
-            <td>
-              {% for service in member.services %}
-                <span>{{service}}</span>
-              {% endfor %}
-            </td>
+            <td>{{ member.email }}</td>
+            <td>{{ member.weight }}kg</td>
+            <td>{{ member.height }}cm</td>
             <td><a href="/members/{{member.id}}">View</a></td>
           </tr>
         {% endfor %}

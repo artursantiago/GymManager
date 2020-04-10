@@ -87,7 +87,7 @@ exports.post =  (req, res) => {
     if (err) {
       return res.send('Write file error!');
     }
-    return res.redirect('/members/{{id}}');
+    return res.redirect('/members/'+id);
   });
 }
 
@@ -104,7 +104,7 @@ exports.edit = (req, res) => {
 
   member = {
     ...foundMember,
-    birth: date(foundMember.birth),
+    birth: date(foundMember.birth).iso,
   }
 
   return res.render('members/edit', {member});
