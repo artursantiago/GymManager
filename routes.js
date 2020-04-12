@@ -25,8 +25,8 @@ routes.post('/members', members.post);
 routes.put('/members', members.put);
 routes.delete('/members', members.delete);
 
-routes.get('/members', (req, res) => {
-  return res.render('members');
+routes.use((req, res) => {
+  return res.status(404).render('not-found');
 });
 
 module.exports = routes;

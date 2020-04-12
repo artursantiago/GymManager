@@ -284,3 +284,13 @@ th:last-child,
 tbody tr td:last-child  {
   text-align: center;
 }
+
+/* === NOT FOUND PAGE === */
+
+.card.not-found {
+  display: block;
+}
+
+.card.not-found img {
+  width: 100%;
+}
