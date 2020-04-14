@@ -1,7 +1,7 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
-const methodOverride  = require('method-override');
-const routes  = require('./routes');
+const methodOverride = require('method-override');
+const routes = require('./routes');
 
 const server = express();
 
@@ -30,7 +30,7 @@ server.use(routes);
 server.set('view engine', 'njk');
 
 // Folder containing the files to be shown.
-nunjucks.configure('views', {
+nunjucks.configure('src/app/views', {
   express: server,
   // Allows to insert HTML code inside variables
   autoescape: false, 
