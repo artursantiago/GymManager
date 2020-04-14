@@ -29,9 +29,9 @@ The project aims to give administrators control over instructors and affiliated 
 ## :wrench: Dependencies
  - <img alt="express" src="https://img.shields.io/badge/express-%5E4.17.1-blue">
  - <img alt="nunjucks" src="https://img.shields.io/badge/nunjucks-%5E3.2.1-blue">
- - <img alt="nunjucks" src="https://img.shields.io/badge/method--override-%5E3.0.0-blue">
- - <img alt="nunjucks" src="https://img.shields.io/badge/browser--sync-%5E2.26.7-blue">
- - <img alt="nunjucks" src="https://img.shields.io/badge/npm--run--all-%5E4.1.5-blue">
+ - <img alt="method-override" src="https://img.shields.io/badge/method--override-%5E3.0.0-blue">
+ - <img alt="browser-sync" src="https://img.shields.io/badge/browser--sync-%5E2.26.7-blue">
+ - <img alt="npm-run-all" src="https://img.shields.io/badge/npm--run--all-%5E4.1.5-blue">
  - <img alt="nodemon" src="https://img.shields.io/badge/nodemon-%5E2.0.2-blue">
 
 <blockquote alt="[ignore]">
